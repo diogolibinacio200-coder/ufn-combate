@@ -1,0 +1,56 @@
+name: Importar projeto validado
+on:
+  push:
+    paths:
+      - 'project-manifest.json'
+      - 'project-part-*.bin'
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Conferir SHA-256 e importar arquivos
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path, PurePosixPath
+          import hashlib, io, json, zipfile
+          manifest = Path('project-manifest.json')
+          if not manifest.exists():
+              raise SystemExit(0)
+          data = json.loads(manifest.read_text())
+          chunks = []
+          for part in data['parts']:
+              name = part['name']
+              assert name.startswith('project-part-') and '/' not in name and name.endswith('.bin')
+              content = Path(name).read_bytes()
+              assert len(content) == part['size']
+              assert hashlib.sha256(content).hexdigest() == part['sha256']
+              chunks.append(content)
+          payload = b''.join(chunks)
+          assert hashlib.sha256(payload).hexdigest() == data['archive_sha256']
+          archive = zipfile.ZipFile(io.BytesIO(payload))
+          assert sum(item.file_size for item in archive.infolist()) < 300_000_000
+          for item in archive.infolist():
+              path = PurePosixPath(item.filename)
+              assert not path.is_absolute() and '..' not in path.parts
+              assert path.parts[0] not in ('.git', '.github')
+              if not item.is_dir():
+                  destination = Path(*path.parts)
+                  destination.parent.mkdir(parents=True, exist_ok=True)
+                  destination.write_bytes(archive.read(item))
+          for part in data['parts']:
+              Path(part['name']).unlink()
+          manifest.unlink()
+          print('Projeto importado e integridade conferida:', len(archive.infolist()), 'arquivos')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publicar UFN Combate 0.2.0: projeto, recursos e testes'
+            git push
+          fi
