@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "archive_sha256": "f7e83521acd4e977677f307977d03fe3b25996ea46f82aefcabfd3316d761b22",
+  "parts": [
+    {
+      "name": "project-part-01.bin",
+      "sha256": "6911947fc21f04cf2ce14e0d417518526d35b8f82a6beb57735982c49275ae24",
+      "size": 20000000
+    },
+    {
+      "name": "project-part-02.bin",
+      "sha256": "e8790875b6e00a99d5b75668e6d2a66e3c4bf641431d6f3d61be17d001970ab6",
+      "size": 20000000
+    },
+    {
+      "name": "project-part-03.bin",
+      "sha256": "ef908b0711c841080c9c006202e6eb5815903c0e011211910884839618dfb390",
+      "size": 20000000
+    },
+    {
+      "name": "project-part-04.bin",
+      "sha256": "0dd4ec4954f928c398c927c8876e9b4304e7117afb3f5f0da69749499876d052",
+      "size": 20000000
+    },
+    {
+      "name": "project-part-05.bin",
+      "sha256": "e568d45625c86439c302a25cf32187fd0310035d54523fb634e47bbd7aa53b43",
+      "size": 4242594
+    }
+  ]
+}
