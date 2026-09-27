@@ -1,0 +1,98 @@
+[
+	{
+		"id": 0,
+		"name": "ARTHUR",
+		"super": "RECORDE PESSOAL",
+		"title": "FORÇA • ACADEMIA"
+	},
+	{
+		"id": 1,
+		"name": "VITOR DO BEM",
+		"super": "AGORA CHEGA!",
+		"title": "RAIVA • PRESSÃO"
+	},
+	{
+		"id": 2,
+		"name": "MARIA",
+		"super": "OPERAÇÃO CAPIVARA",
+		"title": "PRECISÃO • CAPIVARAS"
+	},
+	{
+		"id": 3,
+		"name": "DIOGO",
+		"super": "DOMÍNIO DA NATUREZA",
+		"title": "NATUREZA • CONTROLE"
+	},
+	{
+		"id": 4,
+		"name": "MIRKOS",
+		"super": "PROTOCOLO SINGULARIDADE",
+		"title": "TECNOLOGIA • INTELIGÊNCIA ARTIFICIAL"
+	},
+	{
+		"id": 5,
+		"name": "FELIPE",
+		"super": "GOL DE PLACA",
+		"title": "FUTEBOL • MOBILIDADE"
+	},
+	{
+		"id": 6,
+		"name": "MURILO",
+		"super": "SETE METROS DECISIVO",
+		"title": "HANDEBOL • TRAJETÓRIAS"
+	},
+	{
+		"id": 7,
+		"name": "GABRIEL",
+		"super": "GIRO MÁXIMO",
+		"title": "VELOCIDADE • VEÍCULOS"
+	},
+	{
+		"id": 8,
+		"name": "FABIANO",
+		"super": "EQUAÇÃO FINAL",
+		"title": "MATEMÁTICA • PROGRAMAÇÃO"
+	},
+	{
+		"id": 9,
+		"name": "VITOR DO MAL",
+		"super": "ENTRADA DO HARÉM",
+		"title": "CARISMA • ALIADAS"
+	},
+	{
+		"id": 10,
+		"name": "LORENZO",
+		"super": "CONEXÃO MÁXIMA",
+		"title": "REDES • CONEXÃO"
+	},
+	{
+		"id": 11,
+		"name": "LEONARDO",
+		"super": "ÚLTIMA RODADA",
+		"title": "EMBALO • FINTAS"
+	},
+	{
+		"id": 12,
+		"name": "CRISTIAN",
+		"super": "CASA PRONTA",
+		"title": "ARQUITETURA • CONSTRUÇÃO"
+	},
+	{
+		"id": 13,
+		"name": "FERNANDO",
+		"super": "GRANDE ESPETÁCULO",
+		"title": "MARIONETE • URSO"
+	},
+	{
+		"id": 14,
+		"name": "ANDRÉ CSTH",
+		"super": "APOCALIPSE GASOSO",
+		"title": "CHEFE • GASES CARTUNESCOS"
+	},
+	{
+		"id": 15,
+		"name": "KELVIN",
+		"super": "LINHA PERFEITA",
+		"title": "CHEFE • SKATE"
+	}
+]
